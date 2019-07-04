@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.whz.main.ui.activity.GuideActivity">
+    <com.aries.ui.view.title.TitleBarView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px48dp"/>
+    <android.support.v4.view.ViewPager
+            android:id="@+id/mViewPager"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    <Button
+            android:id="@+id/btnConfirm"
+            style="@style/guide_button"
+            android:layout_width="@dimen/px250dp"
+            android:layout_height="@dimen/px100dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/px100dp"
+            android:text="@string/go"
+            android:visibility="invisible"/>
+    <LinearLayout
+            android:id="@+id/llCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/px100dp"
+            android:orientation="horizontal">
+
+        <View
+                android:id="@+id/view1"
+                android:layout_width="@dimen/px20dp"
+                android:layout_height="@dimen/px20dp"
+                android:background="@drawable/draw_cirle_white_3"/>
+
+        <View
+                android:id="@+id/view2"
+                android:layout_width="@dimen/px20dp"
+                android:layout_height="@dimen/px20dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:background="@drawable/draw_cirle_white_2"/>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aries.ui.view.title.TitleBarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/appTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px96dp"
+        app:title_leftTextDrawable="@drawable/ic_back"
+        app:title_leftTextDrawablePadding="@dimen/px25dp"
+        app:title_leftTextDrawableHeight="@dimen/px36dp"
+        android:background="@color/mainColor"
+        app:title_titleMainTextColor="@color/color_333333"
+        app:title_titleMainTextSize="@dimen/px36dp"
+        app:title_dividerVisible="true"
+        app:title_leftTextDrawableWidth="@dimen/px22dp">
+</com.aries.ui.view.title.TitleBarView>
+

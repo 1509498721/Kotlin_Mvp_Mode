@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px150dp">
+
+    <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:id="@+id/rlSell"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/px20dp"
+                android:background="@drawable/white_background_10"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px110dp">
+            <ImageView
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/img_buyers_1_1"
+                    android:layout_marginRight="@dimen/px20dp"
+                    android:layout_width="@dimen/px110dp"
+                    android:layout_height="@dimen/px100dp"/>
+            <TextView
+                    android:id="@+id/sellText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_seller"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/px36dp"/>
+            <TextView
+                    android:layout_below="@id/sellText"
+                    android:layout_alignLeft="@id/sellText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The seller"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/px24dp"
+            />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        <RelativeLayout
+                android:layout_gravity="center"
+                android:background="@drawable/white_background_10"
+                android:layout_marginTop="@dimen/px20dp"
+                android:layout_marginLeft="@dimen/px20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px110dp">
+            <ImageView
+                    android:id="@+id/messageCenter"
+                    android:layout_alignParentRight="true"
+                    android:background="@mipmap/img_seller_1_1"
+                    android:layout_marginRight="@dimen/px20dp"
+                    android:layout_width="@dimen/px110dp"
+                    android:layout_height="@dimen/px100dp"/>
+            <TextView
+                    android:id="@+id/buyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_buyer"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/px20dp"
+                    android:layout_marginTop="@dimen/px20dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/px36dp"/>
+            <TextView
+                    android:layout_below="@id/buyText"
+                    android:layout_alignLeft="@id/buyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The buyers"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/px24dp"
+            />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

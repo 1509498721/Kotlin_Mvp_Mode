@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/mainColor"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px168dp">
+    <TextView
+        android:id="@+id/tvNetTitle"
+        android:textStyle="bold"
+        android:textSize="@dimen/px46dp"
+        android:layout_marginTop="@dimen/px6dp"
+        android:textColor="@color/color_333333"
+        android:text="hkogo.com"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/llSearch"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/px30dp"
+        android:layout_marginTop="@dimen/px10dp"
+        android:layout_marginRight="@dimen/px30dp"
+        android:background="@drawable/white_background_18"
+        android:layout_below="@+id/tvNetTitle"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80dp" >
+        <ImageView
+            android:layout_marginLeft="@dimen/px30dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:hint="@string/input_key_word"
+            android:layout_marginLeft="@dimen/px10dp"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/px24dp"
+            android:maxLines="1"
+            android:gravity="center|left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</RelativeLayout>

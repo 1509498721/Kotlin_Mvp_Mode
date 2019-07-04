@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HeaderBar">
+        <attr name="titleText" format="string"/>
+        <attr name="bottomColor" format="color"/>
+        <attr name="isShow" format="boolean"/>
+        <attr name="isWhite" format="boolean"/>
+    </declare-styleable>
+</resources>

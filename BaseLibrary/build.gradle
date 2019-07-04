@@ -1,0 +1,128 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    android {
+        compileOptions {
+            sourceCompatibility 1.8
+            targetCompatibility 1.8
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    //处理所有报META-INF/*'的错误
+    packagingOptions {
+        pickFirst 'META-INF/*'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //recyclerview
+    api 'com.android.support:recyclerview-v7:28.0.0'
+
+    api 'com.android.support:cardview-v7:28.0.0'
+
+    /*数据存储*/
+    api "com.orhanobut:hawk:$hawk"
+    api "com.ashokvarma.android:bottom-navigation-bar:$navigation"
+    /*微信上传图片*/
+    api "com.lzy.widget:imagepicker:$imagepicker"
+
+    //图片加载器
+    api "com.github.bumptech.glide:glide:$glide"
+    kapt "com.github.bumptech.glide:compiler:$glide"
+
+    /*anko三方扩展库*/
+    api "org.jetbrains.anko:anko-appcompat-v7-commons:$anko_version"
+    api "org.jetbrains.anko:anko-support-v4-commons:$anko_version"
+    api "org.jetbrains.anko:anko-commons:$anko_version"
+
+    /*rx系列*/
+    api "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    api "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+    api "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
+    //RxAndroidAudio
+    api "com.github.piasy:rxandroidaudio:$rxandroidaudio"
+    api "com.github.tbruyelle:rxpermissions:$rxpermissions"
+
+    //rxlifecycle
+    api "com.trello.rxlifecycle2:rxlifecycle:$rxlifecycleVersion"
+    api "com.trello.rxlifecycle2:rxlifecycle-components:$rxlifecycleVersion"
+    api "com.trello.rxlifecycle2:rxlifecycle-android:$rxlifecycleVersion"
+    api "com.trello.rxlifecycle2:rxlifecycle-android-lifecycle:$rxlifecycleVersion"
+
+    //配置retrofit
+    api "com.squareup.okhttp3:okhttp:$ok_http_version"
+    api "com.squareup.okhttp3:logging-interceptor:$ok_http_version"
+    api "com.squareup.retrofit2:retrofit:$retrofit2Version"
+    api "com.squareup.retrofit2:converter-gson:$retrofit2Version"
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+
+    //dagger
+    api "com.google.dagger:dagger:$dagger_Version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_Version"
+
+    //Banner
+    api "com.youth.banner:banner:$banner"
+
+    //常用UI库
+    api "com.github.AriesHoo.UIWidget:widget-core:${UIWidget}"
+//    api "com.github.AriesHoo.UIWidget:widget-alert:${UIWidget}"
+//    api "com.github.AriesHoo.UIWidget:widget-collapsing:${UIWidget}"
+
+    //加载库
+    api "com.scwang.smartrefresh:SmartRefreshLayout:$smartrefresh-alpha-20"
+
+    //webView提供下载功能
+    api "com.just.agentweb:download:$agentweb"
+    api "com.just.agentweb:filechooser:$agentweb"
+
+    //万能适配器
+    api "com.github.CymChad:BaseRecyclerViewAdapterHelper:$baseRecyclerViewAdapterHelper"
+
+    //文件选择器
+    api 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+
+    //超级文本
+    api "com.github.lygttpod:SuperTextView:$superTextView"
+
+    //首页滑动列表
+    api "com.github.w446108264:ScrollableLayout:$scrollableLayout"
+
+    //模块路由
+    api "com.alibaba:arouter-api:$arout_api_version"
+
+    //EventBus
+    api "org.greenrobot:eventbus:$eventbus"
+
+    //高斯模糊
+    api 'com.commit451:NativeStackBlur:1.0.2'
+
+}
